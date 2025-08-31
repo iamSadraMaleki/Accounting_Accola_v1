@@ -1,34 +1,19 @@
-
 import axios from 'axios';
 
-
 const apiClient = axios.create({
-  
-  baseURL: 'http://localhost:8080',
-
+  baseURL: import.meta.env.VITE_API_BASE_URL || '/api', 
+  // 👆 اگه ENV تنظیم شد → از اون استفاده کن، وگرنه پیش‌فرض /api
   headers: {
     'Content-Type': 'application/json',
-    'Accept': 'application/json', 
+    'Accept': 'application/json',
   },
 });
 
-
+// Interceptor درخواست‌ها
 apiClient.interceptors.request.use(
   (config) => {
-    
     const token = localStorage.getItem('authToken');
-    
 
-   
-    if (token) {
-      config.headers['Authorization'] = `Bearer ${token}`;
-     
-    } else {
-      console.log('Interceptor: No token found in localStorage.'); 
-    }
-
-    console.log(`[Request Interceptor] Requesting: ${config.method.toUpperCase()} ${config.url}`);
-    console.log(`[Request Interceptor] Token from localStorage: ${token ? 'Found (' + token.substring(0, 10) + '...)' : 'Not Found'}`);
     if (token) {
       config.headers['Authorization'] = `Bearer ${token}`;
       console.log('[Request Interceptor] Authorization header SET');
@@ -36,38 +21,28 @@ apiClient.interceptors.request.use(
       console.log('[Request Interceptor] Authorization header NOT SET');
     }
 
-
-   
-    return config; 
+    console.log(`[Request Interceptor] ${config.method.toUpperCase()} ${config.url}`);
+    return config;
   },
   (error) => {
-   
     console.error('Interceptor Request Error:', error);
-    return Promise.reject(error); 
+    return Promise.reject(error);
   }
 );
 
-
+// Interceptor پاسخ‌ها
 apiClient.interceptors.response.use(
-  (response) => {
-   
-    return response;
-  },
+  (response) => response,
   (error) => {
-    
     console.error('Interceptor Response Error:', error.response || error.message);
 
-    
     if (error.response && error.response.status === 401) {
       console.error('Interceptor: Unauthorized (401). Token may be invalid/expired.');
-
-     
+      // 👉 میتونی اینجا redirect به صفحه login هم بذاری
     }
 
-  
     return Promise.reject(error);
   }
 );
 
 export default apiClient;
-
