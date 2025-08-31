@@ -1,0 +1,72 @@
+
+:root {
+  
+  --primary-color: #FF4500; 
+  --primary-color-dark: #CC3700; 
+  --secondary-color: #FFFFFF; 
+  --dark-bg: #1a1a1a; 
+  --dark-secondary: #2a2a2a; 
+  --text-color-dark: #333333; 
+  --text-color-light: #FFFFFF; 
+  --border-color: #444444; 
+  --background-light: #f8f9fa; 
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--secondary-color); 
+  color: var(--text-color-dark);
+
+  background-image: url('/images/goa-sunset.jpg'); 
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color); 
+}
+a:hover {
+    color: var(--primary-color-dark);
+}
+
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 15px;
+  border: none; 
+  background-color: var(--primary-color);
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+}
+
+.text-light {
+    color: var(--text-color-light);
+}
+.text-dark {
+    color: var(--text-color-dark);
+}

@@ -1,0 +1,83 @@
+
+
+.card-list-container {
+    margin-top: 20px;
+}
+
+.card-list-container h4 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+}
+
+.card-item {
+    background: linear-gradient(135deg, #444 0%, var(--dark-secondary) 100%); 
+    border-radius: 10px;
+    padding: 15px 20px;
+    color: #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #555;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    min-height: 150px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.bank-name {
+    font-weight: bold;
+}
+
+.card-body {
+    flex-grow: 1; }
+
+.card-number {
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 1.4em;
+    letter-spacing: 2px; 
+    text-align: center;
+    margin-bottom: 10px;
+    color: #fff;
+    direction: ltr; 
+}
+.card-holder {
+    font-size: 0.95em;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.card-footer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px;
+}
+
+.card-footer button {
+    padding: 5px 10px;
+    font-size: 0.8em;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ccc;
+    opacity: 0.7; 
+    cursor: not-allowed; 
+}
+
+.card-footer button:hover {
+    
+}

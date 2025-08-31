@@ -1,0 +1,130 @@
+
+
+.profile-form {
+    background-color: var(--dark-secondary); 
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px; 
+    color: var(--text-color-light); 
+}
+
+.profile-form h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.profile-form fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.profile-form legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: var(--primary-color-dark);
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1; 
+    min-width: 200px;
+    margin-bottom: 5px; 
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: normal; 
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 8px 10px; 
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #444; 
+    color: var(--text-color-light);
+    font-size: 0.95em;
+}
+.form-group input[type="email"][disabled] {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.3);
+}
+
+.form-group input[type="file"] {
+    padding: 5px;
+    color: #ccc;
+    font-size: 0.9em;
+}
+.form-group input[type="file"]::file-selector-button {
+    padding: 6px 10px;
+    margin-right: 10px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color-dark);
+    color: var(--text-color-light);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.form-group input[type="file"]::file-selector-button:hover {
+    background-color: var(--primary-color);
+}
+
+
+.form-actions {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 15px;
+}
+
+.save-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 15px;
+    border: none; 
+    background-color: var(--primary-color);
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.last-updated {
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+
+.error-message {  }
+.success-message {  }
+button:disabled { }

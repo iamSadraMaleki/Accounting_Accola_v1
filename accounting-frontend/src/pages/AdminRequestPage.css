@@ -1,0 +1,134 @@
+
+.admin-request-page { padding: 20px; }
+.admin-request-page h2 { text-align: center; margin-bottom: 30px; color: var(--primary-color); }
+
+
+.filters.request-filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+ .filters.request-filters button {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+ }
+ .filters.request-filters button:hover {
+    background-color: var(--dark-secondary);
+    border-color: #888;
+    color: white;
+ }
+  .filters.request-filters button.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+ }
+/* -------------------- */
+
+.transaction-table-container { overflow-x: auto; margin-top: 20px; }
+.requests-table { width: 100%; border-collapse: collapse; font-size: 0.9em; color: black ; }
+.requests-table th, .requests-table td { border: 1px solid var(--border-color); padding: 8px 10px; text-align: right; vertical-align: top; }
+.requests-table thead th { background-color: #333; font-weight: bold; white-space: nowrap; }
+.requests-table tbody tr:nth-child(odd) { background-color: rgba(255, 255, 255, 0.03); }
+.requests-table tbody tr:hover { background-color: rgba(var(--primary-color-rgb, 255, 69, 0), 0.1); }
+
+.status-row-pending {}
+.status-row-approved { background-color: rgba(40, 167, 69, 0.08) !important; }
+.status-row-rejected { background-color: rgba(220, 53, 69, 0.08) !important; opacity: 0.8; }
+
+
+.status-badge { padding: 3px 8px; border-radius: 12px; font-size: 0.85em; font-weight: bold; color: white; text-align: center; display: inline-block; min-width: 80px; }
+.status-pending { background-color: #ffc107; color: #333; }
+.status-approved { background-color: #28a745; }
+.status-rejected { background-color: #dc3545; }
+
+.requests-table td.request-details {
+    white-space: pre-wrap; 
+    max-width: 300px; 
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.requests-table .action-buttons {
+    display: flex;
+    flex-direction: column; 
+    gap: 5px;
+    min-width: 70px;
+}
+
+.requests-table .action-btn { padding: 4px 8px; font-size: 0.85em; border-radius: 4px; border: none; cursor: pointer; color: white; }
+.action-btn.approve { background-color: #28a745; }
+.action-btn.approve:hover { background-color: #218838; }
+.action-btn.reject { background-color: #dc3545; }
+.action-btn.reject:hover { background-color: #c82333; }
+
+.requests-table .resolution-details span { display: block; margin-bottom: 3px; font-size: 0.9em; }
+.requests-table .resolution-details small { font-size: 0.8em; color: #000000; }
+
+
+/* --- استایل مودال --- */
+.request-modal-content .form-group { margin-bottom: 15px; }
+.request-modal-content label { display: block; margin-bottom: 5px; font-weight: bold; color: #ccc; }
+.request-modal-content textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: #333;
+    color: var(--text-color-light);
+    font-family: inherit;
+    box-sizing: border-box;
+}
+.request-modal-content textarea:focus {
+     outline: none;
+     border-color: var(--primary-color);
+     box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.3);
+}
+
+.request-modal-content .request-details-modal {
+     background-color: rgba(0,0,0,0.2);
+     padding: 10px;
+     border-radius: 4px;
+     max-height: 150px;
+     overflow-y: auto;
+     font-size: 0.95em;
+     white-space: pre-wrap;
+     border: 1px solid #444;
+}
+
+.request-modal-content hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 20px 0;
+}
+
+.modal-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px;
+}
+.modal-actions .cancel-btn {
+     background-color: #6c757d;
+     color: white;
+     padding: 8px 20px; border: none; border-radius: 4px; cursor: pointer;
+}
+.modal-actions .cancel-btn:hover { background-color: #5a6268; }
+.modal-actions .action-btn { 
+    padding: 8px 20px; font-weight: bold;
+}
+
+
+
+.error-message.history-error { 
+     margin-bottom: 20px; text-align: center;
+}
+.error-message { 
+     color: #ff8a8a; background-color: rgba(220, 53, 69, 0.3); border: 1px solid rgba(220, 53, 69, 0.7); padding: 10px; border-radius: 5px; margin-bottom: 15px; font-size: 0.9em;}

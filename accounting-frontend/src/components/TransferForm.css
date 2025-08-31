@@ -1,0 +1,42 @@
+
+
+.transfer-form {
+    background-color: var(--dark-secondary);
+    padding: 25px 30px;
+    border-radius: 8px;
+    margin: 0 auto; 
+    max-width: 650px;
+    color: var(--text-color-light);
+    border: 1px solid var(--border-color);
+}
+
+
+.transfer-form h3 {  }
+.transfer-form .form-group { margin-bottom: 20px; }
+.transfer-form .form-group label { display: block; margin-bottom: 7px; font-size: 0.95em; color: #ccc; }
+.transfer-form .form-group input[type="text"],
+.transfer-form .form-group input[type="number"],
+.transfer-form .form-group select { width: 100%; padding: 10px 12px; border: 1px solid #555; border-radius: 4px; box-sizing: border-box; background-color: #333; color: var(--text-color-light); font-size: 1em; font-family: inherit; }
+.transfer-form .form-group input:focus,
+.transfer-form .form-group select:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.3); }
+.transfer-form .submit-btn { width: 100%; padding: 12px; font-size: 1.1em; font-weight: bold; margin-top: 15px; }
+
+
+
+.lookup-status {
+    min-height: 1.5em; 
+    margin-top: 5px;
+    font-size: 0.85em;
+}
+.lookup-status .error-text {
+    color: #ffc107; 
+}
+.lookup-status .success-text {
+    color: lightgreen; 
+    font-weight: bold;
+}
+
+
+.error-message { }
+.success-message { }
+button:disabled { opacity: 0.6; cursor: not-allowed; }

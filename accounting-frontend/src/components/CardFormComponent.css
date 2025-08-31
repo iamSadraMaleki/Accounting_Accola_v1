@@ -1,0 +1,126 @@
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+
+.card-form-container {
+    background-color: var(--dark-bg); 
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 550px; 
+    margin: 30px auto; 
+    color: var(--text-color-light);
+}
+
+.card-form h4 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.3em;
+}
+
+.card-form .form-group {
+    margin-bottom: 18px;
+}
+
+.card-form .form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.card-form .form-group input[type="text"],
+.card-form .form-group input[type="number"],
+.card-form .form-group input[type="tel"] { 
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #333;
+    color: var(--text-color-light);
+    font-size: 1em;
+}
+
+.card-form .form-group input:focus {
+     outline: none;
+     border-color: var(--primary-color);
+     box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.3);
+}
+
+.card-form .form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.card-form .form-row .form-group {
+    flex: 1;
+    margin-bottom: 0; 
+}
+
+.card-form .input-error {
+     border-color: #dc3545 !important; 
+}
+.card-form .field-error {
+    color: #ffc107; 
+    font-size: 0.8em;
+    margin-top: 5px;
+    display: block;
+}
+
+
+.card-form-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end; 
+    gap: 15px;
+}
+
+.card-form-actions button {
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.card-form-actions .save-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+.card-form-actions .save-btn:hover:not(:disabled) {
+    background-color: var(--primary-color-dark);
+}
+
+.card-form-actions .cancel-btn {
+    background-color: #6c757d; 
+    color: white;
+}
+.card-form-actions .cancel-btn:hover {
+    background-color: #5a6268;
+}
+
+.card-form-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+.error-message { /* ... */ color: #ff8a8a; background-color: rgba(220, 53, 69, 0.3);  }

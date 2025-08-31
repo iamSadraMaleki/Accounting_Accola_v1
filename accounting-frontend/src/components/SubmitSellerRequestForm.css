@@ -1,0 +1,30 @@
+
+
+.submit-request-form {
+    padding: 15px; 
+    
+}
+
+.submit-request-form .form-group { margin-bottom: 15px; } 
+.submit-request-form label { }
+.submit-request-form input[type="text"],
+.submit-request-form input[type="tel"],
+.submit-request-form textarea {
+    width: 100%; padding: 8px 10px;
+   
+     border: 1px solid #555; border-radius: 4px; box-sizing: border-box; background-color: #333; color: var(--text-color-light); font-size: 0.95em; font-family: inherit;
+}
+ .submit-request-form input[type="text"][disabled] { 
+     background-color: #444; opacity: 0.7; cursor: not-allowed;
+ }
+
+.submit-request-form textarea { min-height: 60px; } 
+.submit-request-form .form-row { display: flex; gap: 15px; margin-bottom: 15px; }
+.submit-request-form .form-row .form-group { flex: 1; margin-bottom: 0; }
+.submit-request-form .form-group input[type="file"] {  }
+.submit-request-form .form-actions { margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px; }
+.submit-request-form .submit-btn, .submit-request-form .cancel-btn { padding: 8px 20px; font-size: 1em; }
+
+.error-message {  }
+.success-message {  }
+button:disabled {  }

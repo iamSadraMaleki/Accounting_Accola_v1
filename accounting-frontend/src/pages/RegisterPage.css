@@ -1,0 +1,95 @@
+/* کانتینر اصلی */
+.register-page-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(255, 87, 34, 0.7)); /* مشکی به نارنجی */
+}
+
+/* فرم ثبت نام */
+.register-form {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 380px;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  text-align: right; /* راست‌چین برای فارسی */
+}
+
+/* تیتر */
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* گروه فیلد */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95em;
+  background: #111;
+  color: #fff;
+  transition: border 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #ff9800;
+}
+
+/* دکمه ثبت نام */
+.register-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+  transition: opacity 0.3s;
+}
+
+.register-button:hover {
+  opacity: 0.9;
+}
+
+/* لینک ورود */
+.login-link {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+.login-link a {
+  color: #ff9800;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
